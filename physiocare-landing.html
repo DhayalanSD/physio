@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PhysioCare | Physiotherapy &amp; Rehabilitation</title>
+<meta name="description" content="Personalized physiotherapy and rehabilitation focused on mobility, strength, recovery and everyday function. Request an appointment or send an enquiry.">
+<meta property="og:title" content="PhysioCare | Move Better. Live Better.">
+<meta property="og:description" content="Physiotherapy and rehabilitation clinic. Book an appointment request or send an enquiry.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://example.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e7c7b'/%3E%3Cpath d='M9 24V8h8a5 5 0 010 10h-8' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>
+/* Apply saved theme before paint to prevent flashing */
+try{var t=localStorage.getItem('pc-theme')||'system';document.documentElement.dataset.theme=t}catch(e){}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"PhysicalTherapy","name":"PhysioCare","slogan":"Move Better. Live Better.","description":"Physiotherapy and rehabilitation clinic (demo listing; replace with real details)."}</script>
+<style>
+:root{
+  --bg:#f2f7f6;--fg:#0f2a2e;--muted:#4d6468;--card:#ffffff;--border:#d3e1df;
+  --primary:#0b6e6d;--primary-fg:#ffffff;--secondary:#e9a23b;--soft:#e2efed;
+  --success:#16794c;--error:#b3261e;--input:#ffffff;--focus:#0b6e6d;--shadow:0 1px 2px rgba(15,42,46,.06),0 8px 24px -12px rgba(15,42,46,.18);
+  --font-d:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--font-b:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+}
+:root[data-theme="dark"]{
+  --bg:#0a1a1f;--fg:#e8f2f1;--muted:#9bb3b6;--card:#112a30;--border:#27454c;
+  --primary:#4fc3bf;--primary-fg:#05181b;--secondary:#f0b45a;--soft:#143339;
+  --success:#5fd39b;--error:#ff8a80;--input:#0d2227;--focus:#7fe0dc;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+@media (prefers-color-scheme:dark){
+  :root[data-theme="system"]{
+    --bg:#0a1a1f;--fg:#e8f2f1;--muted:#9bb3b6;--card:#112a30;--border:#27454c;
+    --primary:#4fc3bf;--primary-fg:#05181b;--secondary:#f0b45a;--soft:#143339;
+    --success:#5fd39b;--error:#ff8a80;--input:#0d2227;--focus:#7fe0dc;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.65 var(--font-b);padding-top:env(safe-area-inset-top,0);-webkit-text-size-adjust:100%;overflow-x:hidden}
+img,svg{max-width:100%}
+h1,h2,h3{font-family:var(--font-d);line-height:1.12;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.2rem,6.5vw,4.1rem);font-weight:700}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:600}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{width:min(100% - 2rem,1280px);margin-inline:auto}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:46px;padding:0 1.35rem;border-radius:999px;font:600 .98rem var(--font-b);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .2s}
+.btn:active{transform:scale(.98)}
+.btn-p{background:var(--primary);color:var(--primary-fg)}
+.btn-p:hover{filter:brightness(1.08)}
+.btn-o{border-color:var(--border);background:var(--card);color:var(--fg)}
+.btn-o:hover{border-color:var(--primary)}
+.skip{position:absolute;left:-999px;top:0;background:var(--primary);color:var(--primary-fg);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:0}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;font:700 1.25rem var(--font-d);text-decoration:none}
+.logo svg{width:32px;height:32px}
+.links{display:none;gap:1.4rem;list-style:none;margin:0;padding:0}
+.links a{text-decoration:none;font-weight:500;color:var(--muted)}
+.links a:hover{color:var(--fg)}
+.right{display:flex;align-items:center;gap:.5rem}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--border);background:var(--card);color:var(--fg);display:grid;place-items:center;cursor:pointer}
+.icon-btn svg{width:20px;height:20px}
+.sun{display:none}
+:root[data-theme="dark"] .sun{display:block}:root[data-theme="dark"] .moon{display:none}
+@media (prefers-color-scheme:dark){:root[data-theme="system"] .sun{display:block}:root[data-theme="system"] .moon{display:none}}
+.desk-only{display:none}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(86vw,340px);background:var(--card);border-left:1px solid var(--border);z-index:80;transform:translateX(100%);transition:transform .3s;padding:1.2rem;display:flex;flex-direction:column;gap:.3rem;visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.drawer a.l{padding:.8rem .4rem;text-decoration:none;font-weight:500;border-bottom:1px solid var(--border);min-height:44px}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:70;opacity:0;pointer-events:none;transition:opacity .3s}
+.scrim.open{opacity:1;pointer-events:auto}
+.seg{display:flex;gap:.4rem;margin-top:1rem}
+.seg button{flex:1;min-height:44px;border-radius:10px;border:1.5px solid var(--border);background:var(--bg);color:var(--fg);font:500 .9rem var(--font-b);cursor:pointer}
+.seg button[aria-pressed="true"]{border-color:var(--primary);background:var(--soft);font-weight:600}
+
+/* Hero */
+.hero{padding-top:clamp(2.5rem,6vw,5rem)}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+.label{display:inline-block;font:600 .85rem var(--font-b);color:var(--primary);background:var(--soft);padding:.35rem .8rem;border-radius:999px;margin-bottom:1.2rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.cta-row .btn{flex:1 1 180px}
+.rom{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:1.4rem;box-shadow:var(--shadow)}
+.rom svg{width:100%;height:auto;display:block}
+.rom .read{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem}
+.rom .deg{font:700 2.6rem var(--font-d);color:var(--primary)}
+.rom input[type=range]{width:100%;accent-color:var(--primary);min-height:44px}
+.rom small{display:block;color:var(--muted);line-height:1.4}
+.bone{stroke:var(--fg);stroke-width:14;stroke-linecap:round}
+.arc{fill:none;stroke:var(--secondary);stroke-width:4;stroke-linecap:round}
+
+/* Trust */
+.trust{padding:0}
+.trust ul{list-style:none;margin:0;padding:1.2rem 0;display:grid;gap:1rem;grid-template-columns:1fr 1fr;border-block:1px solid var(--border)}
+.trust li{display:flex;gap:.6rem;align-items:center;font-weight:600;font-size:.95rem}
+.trust svg{width:22px;height:22px;color:var(--primary);flex:none}
+
+/* Services */
+.grid{display:grid;gap:1rem}
+.svc{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:1.4rem;display:flex;flex-direction:column;gap:.4rem;box-shadow:var(--shadow);transition:border-color .2s}
+.svc:hover{border-color:var(--primary)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--soft);color:var(--primary);display:grid;place-items:center;margin-bottom:.4rem}
+.svc .ic svg{width:22px;height:22px}
+.svc p{font-size:.95rem;color:var(--muted);margin:0 0 .6rem}
+.svc .acts{margin-top:auto;display:flex;gap:1rem;font-weight:600;font-size:.92rem}
+.svc .acts a{color:var(--primary);min-height:44px;display:inline-flex;align-items:center}
+.head{display:flex;flex-direction:column;gap:.3rem;margin-bottom:2rem}
+
+/* About */
+.about{background:var(--soft)}
+.about-grid{display:grid;gap:2rem}
+.pts{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.8rem}
+.pts li{display:flex;gap:.7rem}
+.pts svg{width:22px;height:22px;color:var(--primary);flex:none;margin-top:3px}
+.why{display:grid;gap:.8rem;grid-template-columns:1fr 1fr}
+.why div{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.1rem;font-weight:600;font-size:.95rem}
+
+/* Steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 2rem 3.4rem;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--primary);color:var(--primary-fg);display:grid;place-items:center;font:700 1rem var(--font-d)}
+.steps li::after{content:"";position:absolute;left:1.15rem;top:2.6rem;bottom:.2rem;width:2px;background:var(--border)}
+.steps li:last-child::after{display:none}
+.steps p{color:var(--muted);margin:0}
+
+/* Team + testimonials */
+.person{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:1.4rem;box-shadow:var(--shadow)}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--soft);color:var(--primary);display:grid;place-items:center;font:700 1.5rem var(--font-d);margin-bottom:1rem}
+.person .role{color:var(--primary);font-weight:600;font-size:.92rem;margin:0 0 .5rem}
+.demo{display:inline-block;font-size:.78rem;color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:.1rem .5rem;margin-bottom:.8rem}
+.quote{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:1.6rem;min-height:210px;box-shadow:var(--shadow)}
+.quote blockquote{margin:.6rem 0 1rem;font:500 1.2rem/1.5 var(--font-d)}
+.stars{color:var(--secondary);letter-spacing:2px}
+.car-ctl{display:flex;gap:.6rem;margin-top:1rem}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--border)}
+.faq summary{list-style:none;cursor:pointer;min-height:56px;padding:1rem 0;display:flex;justify-content:space-between;gap:1rem;font-weight:600;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;color:var(--primary);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted)}
+
+/* Forms */
+.contact-grid{display:grid;gap:2rem}
+form{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:1.4rem;box-shadow:var(--shadow);display:grid;gap:1rem}
+.f2{display:grid;gap:1rem}
+label{display:block;font-weight:600;font-size:.92rem;margin-bottom:.3rem}
+input,select,textarea{width:100%;min-height:46px;padding:.65rem .9rem;border-radius:12px;border:1.5px solid var(--border);background:var(--input);color:var(--fg);font:inherit}
+textarea{min-height:110px;resize:vertical}
+input[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--error)}
+.err{color:var(--error);font-size:.85rem;min-height:1.1em;margin-top:.2rem}
+.consent{display:flex;gap:.7rem;align-items:flex-start;font-weight:400}
+.consent input{width:22px;min-height:22px;margin-top:3px;accent-color:var(--primary)}
+#status{font-weight:600;min-height:1.5em}
+#status.ok{color:var(--success)}#status.bad{color:var(--error)}
+.info{display:grid;gap:.8rem;align-content:start}
+.info .row{display:flex;gap:.8rem}
+.info svg{width:22px;height:22px;color:var(--primary);flex:none;margin-top:3px}
+.notice{font-size:.88rem;color:var(--muted);border-left:3px solid var(--secondary);padding-left:.8rem}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:3rem 0 7rem;background:var(--card)}
+.fgrid{display:grid;gap:2rem;grid-template-columns:1fr 1fr}
+footer h3{font-size:1rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.1rem}
+footer li a{text-decoration:none;color:var(--muted);display:inline-flex;min-height:36px;align-items:center}
+footer li a:hover{color:var(--fg)}
+.legal{margin-top:2rem;padding-top:1.4rem;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted)}
+
+/* Floating / sticky */
+.wa{position:fixed;right:1rem;bottom:calc(76px + env(safe-area-inset-bottom,0));z-index:40;width:56px;height:56px;border-radius:50%;background:#1faa59;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.wa svg{width:28px;height:28px}
+.mbar{position:fixed;inset:auto 0 0 0;z-index:45;display:grid;grid-template-columns:repeat(3,1fr);background:var(--card);border-top:1px solid var(--border);padding-bottom:env(safe-area-inset-bottom,0)}
+.mbar a{min-height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;font-size:.78rem;font-weight:600}
+.mbar a:last-child{background:var(--primary);color:var(--primary-fg)}
+.mbar svg{width:20px;height:20px}
+
+/* Tablet */
+@media (min-width:600px){
+  .grid.g{grid-template-columns:repeat(2,1fr)}
+  .f2{grid-template-columns:1fr 1fr}
+  .trust ul{grid-template-columns:repeat(4,1fr)}
+  .why{grid-template-columns:repeat(3,1fr)}
+  .fgrid{grid-template-columns:repeat(4,1fr)}
+  .desk-only{display:inline-flex}
+}
+@media (min-width:768px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(4,1fr);gap:1.4rem}
+  .steps li{padding:3.4rem 0 0}
+  .steps li::after{left:3rem;right:-1.4rem;top:1.15rem;bottom:auto;width:auto;height:2px}
+}
+/* Desktop */
+@media (min-width:1024px){
+  .links{display:flex}
+  .menu-btn{display:none}
+  .grid.g{grid-template-columns:repeat(3,1fr)}
+  .mbar{display:none}
+  .wa{bottom:1.5rem;right:1.5rem}
+  footer{padding-bottom:3rem}
+  .head{flex-direction:row;justify-content:space-between;align-items:end}
+}
+@media (min-width:1600px){.grid.g{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@keyframes sway{0%,100%{transform:rotate(0)}50%{transform:rotate(-6deg)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+ <div class="wrap nav">
+  <a class="logo" href="#top" aria-label="PhysioCare home">
+   <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--primary)"/><path d="M10 25V8h7.5a5 5 0 010 10H10" fill="none" stroke="var(--primary-fg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22.5" cy="23" r="2.2" fill="var(--secondary)"/></svg>
+   PhysioCare
+  </a>
+  <nav aria-label="Main"><ul class="links">
+   <li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#team">Our Team</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <div class="right">
+   <button class="icon-btn" id="themeBtn" aria-label="Toggle light and dark theme">
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+   </button>
+   <a class="btn btn-p desk-only" href="#contact">Book Appointment</a>
+   <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+   </button>
+  </div>
+ </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Mobile menu">
+ <button class="icon-btn" id="closeBtn" aria-label="Close menu" style="align-self:flex-end"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+ <a class="l" href="#about">About</a><a class="l" href="#services">Services</a><a class="l" href="#team">Our Team</a><a class="l" href="#testimonials">Testimonials</a><a class="l" href="#faq">FAQ</a><a class="l" href="#contact">Contact</a>
+ <p style="margin:1rem 0 0;font-weight:600">Theme</p>
+ <div class="seg" role="group" aria-label="Theme">
+  <button data-t="light" aria-pressed="false">Light</button><button data-t="dark" aria-pressed="false">Dark</button><button data-t="system" aria-pressed="true">System</button>
+ </div>
+ <a class="btn btn-p" href="#contact" style="margin-top:1.2rem">Book Appointment</a>
+</aside>
+
+<main id="main">
+<section class="hero" id="top">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="label">Physiotherapy &amp; Rehabilitation</span>
+   <h1>Helping you move with confidence.</h1>
+   <p class="muted" style="font-size:1.12rem">Personalized physiotherapy and rehabilitation services focused on mobility, strength, recovery and everyday function.</p>
+   <div class="cta-row">
+    <a class="btn btn-p" href="#contact">Book Appointment</a>
+    <a class="btn btn-o" href="#enquiry">Send Enquiry</a>
+   </div>
+   <div class="cta-row" style="margin-top:.7rem">
+    <a class="btn btn-o" href="tel:+910000000000">Call Now</a>
+    <a class="btn btn-o" data-wa href="#">WhatsApp</a>
+   </div>
+  </div>
+  <div class="rom" aria-label="Interactive illustration of joint range of motion">
+   <div class="read"><span style="font-weight:600">Elbow range of motion</span><span class="deg"><span id="degv">90</span>°</span></div>
+   <svg viewBox="0 0 400 240" role="img" aria-label="Diagram of an arm bending at the elbow with an angle arc">
+    <line class="bone" x1="70" y1="170" x2="210" y2="170"/>
+    <g id="fore"><line class="bone" x1="210" y1="170" x2="340" y2="170"/></g>
+    <path class="arc" id="arc" d="M 260 170 A 50 50 0 0 0 210 120"/>
+    <circle cx="210" cy="170" r="12" fill="var(--card)" stroke="var(--primary)" stroke-width="5"/>
+   </svg>
+   <label for="rom" class="muted" style="font-weight:500">Move the slider to see how range changes</label>
+   <input id="rom" type="range" min="20" max="160" value="90">
+   <small>Illustration only. It is not a measurement or diagnosis. Your physiotherapist will assess you in person.</small>
+  </div>
+ </div>
+</section>
+
+<section class="trust" aria-label="Why patients choose us">
+ <div class="wrap"><ul>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg>Personalized Care</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>Patient-Focused Approach</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg>Evidence-Informed Practice</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Convenient Scheduling</li>
+ </ul></div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <div class="head"><h2>Physiotherapy services</h2><p class="muted" style="margin:0">Choose a service to learn more or send an enquiry.</p></div>
+  <div class="grid g" id="svcGrid"></div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="wrap about-grid">
+  <div>
+   <h2>Care that starts with listening.</h2>
+   <p class="muted">Every plan begins with understanding your goals, your routine and what movement means to you.</p>
+   <ul class="pts">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Patient-centered care</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Individualized plans</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Movement-focused rehabilitation</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Patient education</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Progress monitoring</li>
+   </ul>
+  </div>
+  <div class="why">
+   <div>Personalized Care</div><div>One-to-One Attention</div><div>Progress Tracking</div><div>Patient Education</div><div>Flexible Scheduling</div><div>Comfortable Environment</div>
+  </div>
+ </div>
+</section>
+
+<section id="how">
+ <div class="wrap">
+  <h2>How it works</h2>
+  <ol class="steps" style="margin-top:2rem">
+   <li><h3>Send enquiry</h3><p>Tell us what you need.</p></li>
+   <li><h3>Schedule appointment</h3><p>Request a time that suits you.</p></li>
+   <li><h3>Initial assessment</h3><p>Meet your physiotherapist.</p></li>
+   <li><h3>Personalized plan</h3><p>Agree goals and next steps.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section id="team" style="background:var(--soft)">
+ <div class="wrap">
+  <div class="head"><h2>Our team</h2><span class="demo">Demo profiles. Replace with real staff details.</span></div>
+  <div class="grid g">
+   <article class="person"><div class="avatar" aria-hidden="true">DP</div><h3>Dr. Demo Physio</h3><p class="role">Senior Physiotherapist</p><p class="muted" style="font-size:.93rem">Qualification: placeholder. Focus: orthopedic and sports rehabilitation. A short biography goes here.</p></article>
+   <article class="person"><div class="avatar" aria-hidden="true">SR</div><h3>Dr. Sample Rehab</h3><p class="role">Physiotherapist</p><p class="muted" style="font-size:.93rem">Qualification: placeholder. Focus: neurological and geriatric care. A short biography goes here.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="testimonials">
+ <div class="wrap" style="max-width:820px">
+  <h2>Patient stories</h2>
+  <span class="demo">Demo data. Only admin-approved reviews will appear here.</span>
+  <div class="quote" aria-live="polite">
+   <div class="stars" id="qs" aria-hidden="true"></div>
+   <blockquote id="qt"></blockquote>
+   <div class="muted" id="qa"></div>
+  </div>
+  <div class="car-ctl">
+   <button class="btn btn-o" id="prev" aria-label="Previous testimonial">Previous</button>
+   <button class="btn btn-o" id="next" aria-label="Next testimonial">Next</button>
+  </div>
+ </div>
+</section>
+
+<section id="faq" style="background:var(--soft)">
+ <div class="wrap">
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+   <details><summary>Do I need an appointment?</summary><p>Appointments help us give you dedicated time. Send a request and our team will confirm a slot.</p></details>
+   <details><summary>What happens during my first visit?</summary><p>Your physiotherapist listens to your history and goals, assesses movement, and discusses a suggested plan with you.</p></details>
+   <details><summary>How long is a typical session?</summary><p>Session length varies by service. The team will confirm the duration when your slot is confirmed.</p></details>
+   <details><summary>What should I bring?</summary><p>Bring any reports or prescriptions you have, and wear comfortable clothing you can move in.</p></details>
+   <details><summary>Can I request a specific physiotherapist?</summary><p>Yes. Mention your preference in your request and we will do our best to accommodate it.</p></details>
+   <details><summary>Do you offer home physiotherapy?</summary><p>Home physiotherapy is listed as a service. Send an enquiry to check availability in your area.</p></details>
+   <details><summary>Can I reschedule?</summary><p>Yes. Contact the clinic by phone, WhatsApp or email and we will help you find a new time.</p></details>
+   <details><summary>How do I contact the clinic?</summary><p>Use the form below, call, message on WhatsApp or send an email.</p></details>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact-grid">
+  <div class="info">
+   <h2>Send an enquiry</h2>
+   <p class="muted">Share a few details and the clinic will get back to you. This is an enquiry, not an appointment confirmation.</p>
+   <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-6 7-12a7 7 0 10-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div>Clinic address (demo)<br><span class="muted">Add your street, city and PIN code</span></div></div>
+   <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><div>Phone<br><a class="muted" href="tel:+910000000000">+91 00000 00000</a></div></div>
+   <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div>Email<br><a class="muted" href="mailto:hello@example.com">hello@example.com</a></div></div>
+   <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div>Opening hours<br><span class="muted">Mon to Sat, 9:00 AM to 8:00 PM<br>Break 1:00 PM to 2:00 PM</span></div></div>
+   <p class="notice">PhysioCare provides enquiry and appointment services only. Nothing on this site is a diagnosis or a guarantee of results. For emergencies, contact local emergency services.</p>
+  </div>
+  <form id="enquiry" novalidate aria-label="Enquiry form">
+   <div class="f2">
+    <div><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required><div class="err" id="e-name"></div></div>
+    <div><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required><div class="err" id="e-phone"></div></div>
+    <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"><div class="err" id="e-email"></div></div>
+    <div><label for="age">Age</label><input id="age" name="age" type="number" min="0" max="120"></div>
+    <div><label for="service">Service *</label><select id="service" name="service" required><option value="">Select a service</option></select><div class="err" id="e-service"></div></div>
+    <div><label for="contact">Preferred contact</label><select id="contact" name="preferredContact"><option>Phone call</option><option>WhatsApp</option><option>Email</option></select></div>
+    <div><label for="date">Preferred date</label><input id="date" name="preferredDate" type="date"><div class="err" id="e-date"></div></div>
+    <div><label for="time">Preferred time</label><input id="time" name="preferredTime" type="time"></div>
+   </div>
+   <div><label for="msg">Message</label><textarea id="msg" name="message" maxlength="1000"></textarea></div>
+   <label class="consent"><input type="checkbox" id="consent" name="consent"> <span>I agree to be contacted about my enquiry and to the processing of my details for this purpose. *</span></label>
+   <div class="err" id="e-consent"></div>
+   <button class="btn btn-p" type="submit" id="submit">Send Enquiry</button>
+   <div id="status" role="status" aria-live="polite"></div>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fgrid">
+   <div><h3>PhysioCare</h3><p class="muted" style="font-size:.93rem">Move Better. Live Better.</p></div>
+   <div><h3>Services</h3><ul><li><a href="#services">All services</a></li><li><a href="#how">How it works</a></li></ul></div>
+   <div><h3>Quick links</h3><ul><li><a href="#about">About</a></li><li><a href="#team">Our Team</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+   <div><h3>Contact</h3><ul><li><a href="tel:+910000000000">Call</a></li><li><a data-wa href="#">WhatsApp</a></li><li><a href="mailto:hello@example.com">Email</a></li></ul></div>
+  </div>
+  <div class="legal">
+   <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms</a> &nbsp;|&nbsp; <a href="#">Medical Disclaimer</a>
+   <p style="margin:.8rem 0 0;max-width:none">&copy; 2026 PhysioCare. All rights reserved.</p>
+  </div>
+ </div>
+</footer>
+
+<a class="wa" data-wa href="#" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7a11 11 0 01-4.6-4c-.4-.5-1.1-1.5-1.1-2.8s.7-1.9.9-2.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.3-.1.6a6.500 6.500 0 003 2.600c.3.100.5.100.600-.100l.8-1c.2-.2.4-.2.6-.1l1.800.9c.3.1.5.2.5.3.1.2.1.700-.1 1.300z"/></svg></a>
+
+<nav class="mbar" aria-label="Quick actions">
+ <a href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>Call</a>
+ <a data-wa href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 01-13.500 7.800L3 21l1.300-4.400A9 9 0 1121 12z"/></svg>WhatsApp</a>
+ <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book</a>
+</nav>
+
+<script>
+/* ===== Configuration: change these for your clinic ===== */
+const CONFIG={
+  API_URL:'',                       // e.g. 'https://your-api.onrender.com' (POSTs to /api/enquiries)
+  WHATSAPP:'910000000000',          // digits only, with country code
+  WA_MESSAGE:'Hello, I would like to enquire about physiotherapy services.'
+};
+const SERVICES=[
+ ['Orthopedic Physiotherapy','Support for bones, joints and muscles.','M4 20l6-6m0 0l4-4m-4 4l-3-3m7 7l-3-3M17 3l4 4-4 4'],
+ ['Sports Rehabilitation','Return to training with a structured plan.','M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18'],
+ ['Back & Neck Physiotherapy','Mobility and strength for the spine.','M12 3v18M8 6h8M8 10h8M8 14h8M8 18h8'],
+ ['Post-Surgery Rehabilitation','Guided recovery after your procedure.','M12 5v14M5 12h14'],
+ ['Neurological Physiotherapy','Movement support for neurological conditions.','M9 4a3 3 0 00-3 3v1a3 3 0 00-2 3 3 3 0 002 3v1a3 3 0 003 3h6a3 3 0 003-3v-1a3 3 0 002-3 3 3 0 00-2-3V7a3 3 0 00-3-3z'],
+ ['Pediatric Physiotherapy','Gentle, play-based care for children.','M12 4a3 3 0 100 6 3 3 0 000-6zM6 21v-4a6 6 0 0112 0v4'],
+ ['Geriatric Physiotherapy','Balance, strength and independence.','M12 3v6M9 21l3-9 3 9M8 12h8'],
+ ['Home Physiotherapy','Sessions in the comfort of your home.','M3 11l9-8 9 8M5 10v10h14V10'],
+ ['Posture & Mobility','Improve everyday movement habits.','M12 4a2 2 0 100 4 2 2 0 000-4zM12 8v7M9 21l3-6 3 6M7 11h10'],
+ ['Strength & Conditioning','Build capacity safely and steadily.','M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12']
+];
+const TESTI=[
+ ['Demo Patient A','City, State','Orthopedic Physiotherapy','The team listened first and explained every step. Demo review.',5],
+ ['Demo Patient B','City, State','Sports Rehabilitation','Scheduling was easy and my plan fit my routine. Demo review.',5],
+ ['Demo Patient C','City, State','Geriatric Physiotherapy','Clear exercises and friendly guidance throughout. Demo review.',4]
+];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* Theme: light | dark | system, persisted */
+function setTheme(t){document.documentElement.dataset.theme=t;try{localStorage.setItem('pc-theme',t)}catch(e){}
+ $$('.seg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.t===t))}
+const isDark=()=>{const t=document.documentElement.dataset.theme;return t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches)};
+$('#themeBtn').onclick=()=>setTheme(isDark()?'light':'dark');
+$$('.seg button').forEach(b=>b.onclick=()=>setTheme(b.dataset.t));
+setTheme(document.documentElement.dataset.theme||'system');
+
+/* Mobile drawer */
+const dr=$('#drawer'),sc=$('#scrim'),mb=$('#menuBtn');
+function drawer(o){dr.classList.toggle('open',o);sc.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);if(o)$('#closeBtn').focus();else mb.focus()}
+mb.onclick=()=>drawer(true);$('#closeBtn').onclick=sc.onclick=()=>drawer(false);
+$$('#drawer a').forEach(a=>a.addEventListener('click',()=>drawer(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&dr.classList.contains('open'))drawer(false)});
+
+/* WhatsApp links */
+$$('[data-wa]').forEach(a=>{a.href='https://wa.me/'+CONFIG.WHATSAPP+'?text='+encodeURIComponent(CONFIG.WA_MESSAGE);a.target='_blank';a.rel='noopener'});
+
+/* Services */
+$('#svcGrid').innerHTML=SERVICES.map(([n,d,p],i)=>`<article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${p}"/></svg></div><h3>${n}</h3><p>${d}</p><div class="acts"><a href="#contact" aria-label="Learn more about ${n}">Learn more</a><a href="#enquiry" data-s="${i}" aria-label="Enquire about ${n}">Enquire</a></div></article>`).join('');
+$('#service').insertAdjacentHTML('beforeend',SERVICES.map(s=>`<option>${s[0]}</option>`).join(''));
+$$('[data-s]').forEach(a=>a.addEventListener('click',()=>{$('#service').value=SERVICES[a.dataset.s][0]}));
+
+/* Range of motion illustration */
+const rom=$('#rom');
+function drawRom(){const a=+rom.value,r=a*Math.PI/180,x=210+130*Math.cos(-(Math.PI-r)*0+ -(r-Math.PI)),y=170;
+ const ang=(180-a)*Math.PI/180;const fx=210+130*Math.cos(ang),fy=170-130*Math.sin(ang);
+ $('#fore').innerHTML=`<line class="bone" x1="210" y1="170" x2="${fx}" y2="${fy}"/>`;
+ const ax=210+50*Math.cos(ang),ay=170-50*Math.sin(ang);
+ $('#arc').setAttribute('d',`M 160 170 A 50 50 0 0 1 ${ax} ${ay}`);
+ $('#degv').textContent=a}
+rom.oninput=drawRom;drawRom();
+
+/* Testimonials */
+let ti=0;function showT(){const t=TESTI[ti];$('#qs').textContent='★'.repeat(t[4])+'☆'.repeat(5-t[4]);$('#qt').textContent='"'+t[3]+'"';$('#qa').textContent=t[0]+', '+t[1]+' | '+t[2]}
+$('#next').onclick=()=>{ti=(ti+1)%TESTI.length;showT()};$('#prev').onclick=()=>{ti=(ti+TESTI.length-1)%TESTI.length;showT()};showT();
+
+/* Enquiry form: validates, then POSTs to your backend */
+$('#date').min=new Date().toISOString().split('T')[0];
+const form=$('#enquiry'),st=$('#status');let busy=false;
+function setErr(id,m){const e=$('#e-'+id);if(e)e.textContent=m||'';const f=$('#'+id);if(f)f.setAttribute('aria-invalid',m?'true':'false')}
+function validate(){let ok=true;const v=n=>form[n].value.trim();
+ const chk=(id,bad,msg)=>{setErr(id,bad?msg:'');if(bad)ok=false};
+ chk('name',v('name').length<2,'Enter your full name.');
+ chk('phone',!/^[+\d][\d\s-]{7,15}$/.test(v('phone')),'Enter a valid phone number.');
+ chk('email',v('email')&&!/^\S+@\S+\.\S+$/.test(v('email')),'Enter a valid email address.');
+ chk('service',!v('service'),'Select a service.');
+ chk('date',v('preferredDate')&&v('preferredDate')<$('#date').min,'Choose today or a future date.');
+ setErr('consent',form.consent.checked?'':'Please give consent so we can contact you.');if(!form.consent.checked)ok=false;
+ return ok}
+form.addEventListener('blur',e=>{if(e.target.value)validate()},true);
+form.onsubmit=async e=>{e.preventDefault();if(busy||!validate())return;
+ busy=true;const b=$('#submit');b.disabled=true;b.textContent='Submitting...';st.className='';st.textContent='';
+ const data=Object.fromEntries(new FormData(form));data.consent=form.consent.checked;data.source='website';
+ try{
+  if(!CONFIG.API_URL)throw new Error('No API configured');
+  const r=await fetch(CONFIG.API_URL.replace(/\/$/,'')+'/api/enquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+  if(!r.ok)throw new Error('Request failed');
+  st.className='ok';st.textContent='Thank you! Your enquiry has been received.';form.reset();
+ }catch(err){
+  st.className='bad';st.textContent=CONFIG.API_URL?'Unable to submit your enquiry. Please try again.':'Unable to submit your enquiry. The backend is not connected yet: set API_URL in the script, or use Call or WhatsApp.';
+ }finally{busy=false;b.disabled=false;b.textContent='Send Enquiry'}};
+addEventListener('offline',()=>{st.className='bad';st.textContent='Please check your internet connection.'});
+</script>
+</body>
+</html>
